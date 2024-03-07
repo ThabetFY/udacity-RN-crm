@@ -1,12 +1,15 @@
 // Import necessary components and libraries from 'expo-router'
-import { Slot, SplashScreen } from 'expo-router';
+import { Slot, SplashScreen } from "expo-router";
+
+// Import your global CSS file
+import "../styles/global.css";
 
 // Export ErrorBoundary from 'expo-router'
-export { ErrorBoundary } from 'expo-router';
+export { ErrorBoundary } from "expo-router";
 
 // Define initial navigation settings
 export const unstable_settings = {
-	initialRouteName: '(root)',
+  initialRouteName: "(root)",
 };
 
 // Prevent the splash screen from automatically hiding
@@ -23,6 +26,6 @@ SplashScreen.preventAutoHideAsync();
  *    The actual rendering of the app is deferred to a layout component one level down in the component hierarchy.
  */
 export default function () {
-	// Render the Slot component to initiate navigation
-	return <Slot />;
+  // Render the Slot component to initiate navigation
+  return <Slot />;
 }
